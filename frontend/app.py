@@ -13,6 +13,15 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 # Import the chatbot
 from chatbot import GroundwaterChatbot
 
+# Import heuristic search capabilities for advanced optimization
+try:
+    sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'backend'))
+    from heuristic_search import HeuristicSearchManager
+    HEURISTIC_OPTIMIZATION_ENABLED = True
+except ImportError:
+    HEURISTIC_OPTIMIZATION_ENABLED = False
+    # Heuristic search algorithms will be available in advanced features
+
 # Page configuration
 st.set_page_config(
     page_title="💧 Groundwater Monitoring System",
