@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn
+joblib
+geopandas
+folium
+streamlit
+rapidfuzz
+streamlit-folium
+plotly
+requests
+statsmodels
